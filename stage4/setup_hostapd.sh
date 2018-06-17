@@ -6,11 +6,11 @@
 RANDOM_POSTFIX=$(date +%s%N | sha256sum | head -c 4)
 RANDOM_PSK=$(date +%s%N | sha512sum | head -c 8)
 
-SSID=${SSID-"U.M.R_"${RANDOM_POSTFIX}}
+SSID=${SSID-"wifi_"${RANDOM_POSTFIX}}
 PSK=${PSK-$RANDOM_PSK}
 IFACE=${IFACE-wlan0}
 # udhcpd
-IPADDR=${IPADDR-"172.16.233.1"}
+IPADDR=${IPADDR-"172.16.87.1"}
 NETMASK=255.255.255.0
 
 IPADDR_PUB=$(echo $IPADDR | cut -d '.' -f 1,2,3)
@@ -38,7 +38,7 @@ end     ${IPADDR_PUB}.250
 
 opt router $IPADDR
 opt subnet $NETMASK
-opt dns 8.8.8.8
+opt dns 1.2.4.8
 
 EOF
 ) > $ROOT_PATH/etc/udhcpd.conf

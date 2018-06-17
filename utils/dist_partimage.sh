@@ -3,11 +3,11 @@
 . $(dirname $0)/../global_definitions
 
 IMGFILE=${IMGFILE="$DIST_PATH/RPi-arm64-dist.img"}
-IMGSIZE_MB=${IMGSIZE_MB=1024}
+IMGSIZE_MB=${IMGSIZE_MB}
 BOOT_SIZE=${BOOT_SIZE="120MiB"}
 
 if [ ! -e $IMGFILE ]; then
-    dd if=/dev/zero of=$IMGFILE bs=1M count=$IMGSIZE_MB
+    dd if=/dev/zero of=$IMGFILE bs=1M count=1536
 fi
 
 parted -s $IMGFILE -- mklabel msdos

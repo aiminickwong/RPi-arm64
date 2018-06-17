@@ -18,7 +18,7 @@ HOSTNAME=raspberrypi
 
 # Image file configuration
 IMGFILE="dist/RPi-arm64-dist.img"
-IMGSIZE_MB=1024
+IMGSIZE_MB=1536
 BOOT_SIZE="100MiB"
 
 # Filesystem type
@@ -79,9 +79,9 @@ CONFIG_SUDO=1
 # set to 0 to disable Wi-Fi Hotspot
 CONFIG_HOTSPOT=1
 
-SSID="U.M.R-RPi3"
+SSID="wifi-rpi3"
 PSK="raspberry"
-IPADDR="172.16.233.1"
+IPADDR="172.16.87.1"
 
 INSTALL_EXTRA_WIRELESS_FIRMWARE=1
 
