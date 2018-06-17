@@ -1,3 +1,6 @@
+论坛  https://raspberrypi.party/d/5
+
+
 # RPi-arm64
 Build a Debian-based ARM64 system for Raspberry Pi 3 (including 3 B+)
 
